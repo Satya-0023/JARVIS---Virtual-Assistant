@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(-45deg, #0f2027, #2c5364, #00bcd4, #232526);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    overflow-x: hidden;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.main {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.main::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('jarvis3.gif') center center/cover no-repeat;
+    opacity: 0.08;
+    z-index: 0;
+}
+
+.image-container {
+    padding: 10px;
+    z-index: 2;
+    position: relative;
+}
+
+.image-container .image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container .image img {
+    width: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 40px #00bcd4, 0 0 80px #232526 inset;
+}
+
+.image-container h1 {
+    color: #00bcd4;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 40px;
+    letter-spacing: 8px;
+    text-shadow: 0 2px 8px #000a;
+}
+
+.image-container p {
+    color: #e0e0e0;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 18px;
+    text-shadow: 0 1px 4px #0008;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    min-width: 300px;
+    max-width: 500px;
+    height: 60px;
+    border-radius: 30px;
+    background: rgba(202, 253, 255, 0.15);
+    box-shadow: 0 2px 16px #00bcd455;
+    z-index: 2;
+    position: relative;
+}
+
+.input .talk {
+    background: #00bcd4;
+    outline: none;
+    border: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-right: 18px;
+    box-shadow: 0 2px 8px #00bcd488;
+    transition: background 0.2s;
+}
+
+.input .talk:hover {
+    background: #0097a7;
+}
+
+.input .talk i {
+    font-size: 24px;
+    color: #fff;
+}
+
+.input .content {
+    color: #aed0d0;
+    font-size: 18px;
+    margin-right: 20px;
+    font-weight: 500;
+    text-shadow: 0 1px 4px #0008;
+}

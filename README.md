@@ -33,4 +33,3 @@ A simple browser-based virtual assistant built with HTML, CSS, and JavaScript. J
 
 ---
 
-**Made by Satya**
